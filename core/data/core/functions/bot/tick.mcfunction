@@ -37,8 +37,9 @@ scoreboard players add @a[tag=bot] jump 1
 execute at chat.pvp run execute at @a[distance=..12,sort=nearest,gamemode=adventure,tag=bot_target] run tag chat.pvp remove respawn
 execute at @a[tag=bot,tag=respawn] run tag @a remove bot_target
 #execute at .bot run execute at @a[distance=5..7,sort=nearest] run player .bot jump
-scoreboard players add chat.pvp attack 1
-execute in ffa:kits run tp @a[tag=respawn] 0.5 40.5 0.5
+scoreboard players remove chat.pvp attack 1
+scoreboard players remove chat.pvp r 1
+execute in ffa:classic run tp @a[tag=respawn] 0.5 64 0.5
 scoreboard players reset @a player_attack
 scoreboard players reset @a player_damage
 scoreboard players set dead dead 1
