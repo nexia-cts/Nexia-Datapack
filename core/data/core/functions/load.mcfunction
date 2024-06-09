@@ -11,7 +11,3 @@ scoreboard objectives add dead deathCount
 scoreboard objectives add hp health
 scoreboard objectives modify hp displayname {"text":"❤","color":"red"}
 scoreboard objectives setdisplay belowName hp
-
-#team add ZAPro
-#team modify ZAPro color white
-#team modify ZAPro prefix [{"text":"P","color":"#A201F9","bold":true},{"text":"r","color":"#C301F3","bold":true},{"text":"o","color":"#E401ED","bold":true},{"text":" | ","color":"dark_gray","bold":false}]
