@@ -31,8 +31,7 @@ execute at @a[tag=bot,scores={player_damage=1..}] run execute as @a[distance=0.1
 #scoreboard players set @a strafe 0
 #scoreboard players set @a[tag=respawn,scores={strafec=3..}] strafec 0
 
-scoreboard players set @a[tag=bot,scores={jump=13..}] jump 0
-scoreboard players add @a[tag=bot] jump 1
+scoreboard players set @a[tag=bot,scores={jump=11..}] jump 0
 
 execute at femboy.ai run execute at @a[distance=..12,sort=nearest,gamemode=adventure,tag=bot_target] run tag femboy.ai remove respawn
 execute at @a[tag=bot,tag=respawn] run tag @a remove bot_target
@@ -46,3 +45,5 @@ scoreboard players set dead dead 1
 scoreboard players set @a strafe 0
 execute as femboy.ai run scoreboard players set dead dead 0
 execute if score dead dead > @r strafe run function core:bot/bot
+effect clear femboy.ai minecraft:strength
+execute at femboy.ai if block ~ ~-0.01 ~ minecraft:air run effect give femboy.ai minecraft:strength 1 0 true
