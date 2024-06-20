@@ -1,6 +1,6 @@
-tag chat.pvp add respawn
+tag femboy.ai add respawn
 #player bot. stop
-player chat.pvp sprint
+player femboy.ai sprint
 #execute at coded.ai run execute at @a[distance=2.8..12,sort=nearest,gamemode=adventure,tag=bot_target] run player coded.ai move forward
 #execute at coded.ai run execute at @a[distance=0.1..2.5,sort=nearest,gamemode=adventure,tag=bot_target] run player coded.ai move backward
 #execute at .bot1 run execute at @a[distance=4.0..12,sort=nearest] run player .bot1 
@@ -31,17 +31,19 @@ execute at @a[tag=bot,scores={player_damage=1..}] run execute as @a[distance=0.1
 #scoreboard players set @a strafe 0
 #scoreboard players set @a[tag=respawn,scores={strafec=3..}] strafec 0
 
-scoreboard players set @a[tag=bot,scores={jump=13..}] jump 0
-scoreboard players add @a[tag=bot] jump 1
+scoreboard players set @a[tag=bot,scores={jump=11..}] jump 0
 
-execute at chat.pvp run execute at @a[distance=..12,sort=nearest,gamemode=adventure,tag=bot_target] run tag chat.pvp remove respawn
+execute at femboy.ai run execute at @a[distance=..12,sort=nearest,gamemode=adventure,tag=bot_target] run tag femboy.ai remove respawn
 execute at @a[tag=bot,tag=respawn] run tag @a remove bot_target
 #execute at .bot run execute at @a[distance=5..7,sort=nearest] run player .bot jump
-scoreboard players add chat.pvp attack 1
-execute in ffa:kits run tp @a[tag=respawn] 0.5 40.5 0.5
+scoreboard players remove femboy.ai attack 1
+scoreboard players remove femboy.ai r 1
+execute in ffa:classic run tp @a[tag=respawn] 0.5 64 0.5
 scoreboard players reset @a player_attack
 scoreboard players reset @a player_damage
 scoreboard players set dead dead 1
 scoreboard players set @a strafe 0
-execute as chat.pvp run scoreboard players set dead dead 0
+execute as femboy.ai run scoreboard players set dead dead 0
 execute if score dead dead > @r strafe run function core:bot/bot
+effect clear femboy.ai minecraft:strength
+execute at femboy.ai if block ~ ~-0.01 ~ minecraft:air run effect give femboy.ai minecraft:strength 1 0 true

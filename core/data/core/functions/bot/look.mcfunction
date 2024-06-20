@@ -1,2 +1,2 @@
-execute at chat.pvp run execute at @a[distance=0.1..,sort=nearest,limit=1,gamemode=adventure,tag=bot_target] run player chat.pvp look at ~ ~1.3 ~
-schedule function core:bot/look 5t
+execute at femboy.ai run execute at @a[distance=0.1..,sort=nearest,limit=1,gamemode=adventure,tag=bot_target] run player femboy.ai look at ~ ~1.4 ~
+schedule function core:bot/look 4t
