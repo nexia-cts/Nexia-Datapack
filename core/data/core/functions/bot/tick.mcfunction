@@ -41,9 +41,6 @@ scoreboard players remove femboy.ai r 1
 execute in ffa:classic run tp @a[tag=respawn] 0.5 64 0.5
 scoreboard players reset @a player_attack
 scoreboard players reset @a player_damage
-scoreboard players set dead dead 1
 scoreboard players set @a strafe 0
-execute as femboy.ai run scoreboard players set dead dead 0
-execute if score dead dead > @r strafe run function core:bot/bot
 effect clear femboy.ai minecraft:strength
 execute at femboy.ai if block ~ ~-0.01 ~ minecraft:air run effect give femboy.ai minecraft:strength 1 0 true
